@@ -12,6 +12,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var zipCodeLabel: UILabel!
+    @IBOutlet weak var zipCodeTextField: UITextField!
+    @IBOutlet weak var buyNowBtn: UIButton!
     
     let states = ["Alaska","Arkansas","Alabama","California","Maine","New York"]
     
@@ -26,6 +31,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func buyNowBtnPressed(_ sender: Any) {
+        
     }
     
     @IBAction func stateBtnPressed(_ sender: Any) {
@@ -48,6 +57,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         statePickerBtn.setTitle(states[row], for: UIControlState.normal)
         statePicker.isHidden = true
+        countryLabel.isHidden = false
+        countryTextField.isHidden = false
+        zipCodeLabel.isHidden = false
+        zipCodeTextField.isHidden = false
+        buyNowBtn.isHidden = false
     }
 }
 
